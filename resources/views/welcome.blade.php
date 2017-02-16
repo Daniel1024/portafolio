@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Daniel López 2
+                    Daniel López
                 </div>
 
                 <div class="links">
