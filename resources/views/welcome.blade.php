@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Daniel López
+                    Cambiando el nombre en test
                 </div>
 
                 <div class="links">
