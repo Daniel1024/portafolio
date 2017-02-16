@@ -6,8 +6,8 @@
  * Time: 12:53 PM
  */
 
-$repo_dir = '/home/daniel/mirrors/potafolio.git';
-$web_root_dir = '/home/daniel/code/potafolio';
+$repo_dir = '/home/daniel/mirrors/portafolio.git';
+$web_root_dir = '/home/daniel/code/portafolio';
 $web_test_dir = '/home/daniel/code/test';
 
 // Full path to git binary is required if git is not in your PHP user's path. Otherwise just use 'git'.
