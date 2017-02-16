@@ -21,13 +21,18 @@ if ( empty($payload) ) {
    exit(404);
 }
 
-if ($payload->push->changes[0]->new->name == 'master') {
+//bitbucket
+// $payload->push->changes[0]->new->name == 'master'
+//Github
+// $payload->ref
+
+if ($payload->ref == 'refs/heads/master') {
 
     exec("cd $repo_dir && $git_bin_path fetch");
     exec("cd $repo_dir && GIT_WORK_TREE=$web_root_dir $git_bin_path checkout -f master");
     exec("cd $web_root_dir && php artisan optimize");
 
-} else if ($payload->push->changes[0]->new->name == 'test') {
+} else if ($payload->ref == 'refs/heads/test') {
 
     exec("cd $repo_dir && $git_bin_path fetch");
     exec("cd $repo_dir && GIT_WORK_TREE=$web_test_dir $git_bin_path checkout -f test");
