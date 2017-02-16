@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Daniel López
+                    Daniel López 35
                 </div>
 
                 <div class="links">
