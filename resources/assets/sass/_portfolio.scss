@@ -273,7 +273,10 @@ header {
   .trabajo {
     width: 100%;
   }
-  .formulario input {
-    width: 100%;
+  .formulario {
+    #field_nombre,
+    #field_correo {
+      width: 100%;
+    }
   }
 }
