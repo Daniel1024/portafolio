@@ -20,27 +20,24 @@ const app = new Vue({
 });*/
 
 $(function () {
-    let acerca = $('#acerca-de').offset().top,
-        trabajos = $('#trabajos').offset().top,
-        contacto = $('#contacto').offset().top,
-        html = $('html, body');
+    let html = $('html, body');
 
     $('#btn-acerca-de').on('click', function(e) {
         e.preventDefault();
         html.animate({
-            scrollTop: acerca + 75
+            scrollTop: $('#acerca-de').offset().top + 75
         }, 500);
     });
     $('#btn-trabajos').on('click', function(e) {
         e.preventDefault();
         html.animate({
-            scrollTop: trabajos
+            scrollTop: $('#trabajos').offset().top
         }, 500);
     });
     $('#btn-contacto').on('click', function(e) {
         e.preventDefault();
         html.animate({
-            scrollTop: contacto
+            scrollTop: $('#contacto').offset().top
         }, 500);
     });
 });
