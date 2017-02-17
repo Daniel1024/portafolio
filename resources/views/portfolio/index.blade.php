@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
 </head>
 <body>
-<div id="message" class="alert alert-success" role="alert" style="position: fixed; width: 100%; text-align: center; display:none;">
+<div id="message" class="alert alert-info" role="alert" style="position: fixed; width: 100%; text-align: center; display:none;">
     <strong>Mensaje enviado correctamente.</strong> Pronto me comunicare con usted.
 </div>
 <header>
@@ -89,7 +89,7 @@
             }, 500);
         }
         @if(session()->has('message'))
-            $('#message').slideDown('slow').delay(5000).slideUp('slow');
+            $('#message').slideDown('slow').delay(7000).slideUp('slow');
         @endif
     });
 </script>
