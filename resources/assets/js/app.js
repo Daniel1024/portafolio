@@ -13,8 +13,34 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
-
+//Vue.component('example', require('./components/Example.vue'));
+/*
 const app = new Vue({
     el: '#app'
+});*/
+
+$(function () {
+    let acerca = $('#acerca-de').offset().top,
+        trabajos = $('#trabajos').offset().top,
+        contacto = $('#contacto').offset().top,
+        html = $('html, body');
+
+    $('#btn-acerca-de').on('click', function(e) {
+        e.preventDefault();
+        html.animate({
+            scrollTop: acerca + 75
+        }, 500);
+    });
+    $('#btn-trabajos').on('click', function(e) {
+        e.preventDefault();
+        html.animate({
+            scrollTop: trabajos
+        }, 500);
+    });
+    $('#btn-contacto').on('click', function(e) {
+        e.preventDefault();
+        html.animate({
+            scrollTop: contacto
+        }, 500);
+    });
 });
