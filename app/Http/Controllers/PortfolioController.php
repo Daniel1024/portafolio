@@ -39,7 +39,11 @@ class PortfolioController extends Controller
             'mensaje'   => 'required|min:10'
         ]);
 
-        Contact::create($request->all());
+        Contact::create([
+            'nombre'    => title_case($request->get('nombre')),
+            'correo'    => strtolower($request->get('correo')),
+            'mensaje'   => $request->get('mensaje'),
+        ]);
 
         return back()->with('message', 'ok');
     }
