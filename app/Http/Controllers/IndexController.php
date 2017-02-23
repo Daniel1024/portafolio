@@ -38,9 +38,9 @@ class IndexController extends Controller
         ]);
 
         Contact::create([
-            'nombre'    => title_case($request->get('nombre')),
-            'correo'    => strtolower($request->get('correo')),
-            'mensaje'   => $request->get('mensaje'),
+            'name'    => title_case($request->get('nombre')),
+            'email'    => strtolower($request->get('correo')),
+            'message'   => $request->get('mensaje'),
         ]);
 
         return back()->with('message', 'ok');
