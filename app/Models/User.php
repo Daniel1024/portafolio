@@ -29,7 +29,7 @@ class User extends Authenticatable
 
     public function getGravatarAttribute()
     {
-        $default = config('app.url') . '/avatar.jpg';
+        $default = 'mm'; //config('app.url') . '/avatar.jpg';
         $size = 150;
         $hash = md5(strtolower(trim($this->attributes['email'])));
 

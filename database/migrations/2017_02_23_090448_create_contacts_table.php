@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -15,9 +16,9 @@ class CreateContactsTable extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('nombre');
-            $table->string('correo');
-            $table->text('mensaje');
+            $table->string('name');
+            $table->string('email');
+            $table->text('message');
 
             $table->timestamps();
         });

@@ -2,9 +2,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Portafolio</title>
-    <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}">
+    <link rel="stylesheet" href="{{ mix('css/portfolio.css') }}">
+    <script src="{{ asset('js/manifest.js') }}"></script>
+    <script src="{{ asset('js/vendor.js') }}"></script>
+    <script>
+        window.Laravel = {!! json_encode([
+                'csrfToken' => csrf_token(),
+            ]) !!}
+    </script>
 </head>
 <body>
 <div id="message" class="alert alert-info" role="alert" style="position: fixed; width: 100%; text-align: center; display:none;">
@@ -42,15 +51,15 @@
             <h3 class="titulo">Trabajos</h3>
             <div class="contenedor-trabajos">
                 @foreach($portfolios as $portfolio)
-                <a href="{{ $portfolio['url'] }}" class="trabajo">
-                    <div class="thumb">
-                        <img src="{{ $portfolio['img'] }}" alt="{{ $portfolio['imgDescription'] }}">
-                    </div>
-                    <div class="descripcion">
-                        <p class="nombre">{{ $portfolio['title'] }}</p>
-                        <p class="categoria">{{ $portfolio['tags'] }}</p>
-                    </div>
-                </a>
+                    <a href="{{ $portfolio['url'] }}" class="trabajo">
+                        <div class="thumb">
+                            <img src="{{ $portfolio['img'] }}" alt="{{ $portfolio['imgDescription'] }}">
+                        </div>
+                        <div class="descripcion">
+                            <p class="nombre">{{ $portfolio['title'] }}</p>
+                            <p class="categoria">{{ $portfolio['tags'] }}</p>
+                        </div>
+                    </a>
                 @endforeach
             </div>
         </div>
@@ -79,7 +88,7 @@
         </div>
     </section>
 </footer>
-<script src="{{ asset(mix('js/app.js')) }}"></script>
+<script src="{{ mix('js/app.js') }}"></script>
 <script>
     $(function () {
         let errors = {{ $errors->count() }};

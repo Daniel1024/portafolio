@@ -5,12 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 
-class PortfolioController extends Controller
+class IndexController extends Controller
 {
     public function index()
     {
-        //dd(config('app.url'));
-        //$default = urlencode(config('app.url') . '/img/default_user.png');
         $size = 150;
         $hash = md5(strtolower(trim('d.lopez.1740@gmail.com')));
 
@@ -20,7 +18,7 @@ class PortfolioController extends Controller
 
         for ($i=1; $i<=8; $i++) {
             $portfolios[] = [
-                'img'               => url("img/trabajos/$i.jpg"),
+                'img'               => 'https://dummyimage.com/150x150/49a3d6/ffffff.jpg',
                 'imgDescription'    => "Descripcion de la imgen $i",
                 'title'             => 'Lorem Ipsum',
                 'tags'              => 'HTML - CSS - PHP',
@@ -47,4 +45,5 @@ class PortfolioController extends Controller
 
         return back()->with('message', 'ok');
     }
+
 }

@@ -11,6 +11,7 @@ const { mix } = require('laravel-mix');
  |
  */
 
-mix.version()
-    .js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'public/css');
+mix.js('resources/assets/js/app.js', 'js')
+    .sass('resources/assets/sass/portfolio.scss', 'public/css')
+    .sass('resources/assets/sass/app.scss', 'public/css')
+    .extract(['bootstrap-sass', 'jquery', 'lodash']);
