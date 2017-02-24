@@ -16,7 +16,7 @@
     </script>
 </head>
 <body>
-<div id="message" class="alert alert-info" role="alert" style="position: fixed; width: 100%; text-align: center; display:none;">
+<div id="message" class="alert alert-info lead" role="alert" style="position: fixed; width: 100%; text-align: center; display:none;">
     <strong>Mensaje enviado correctamente.</strong> Pronto me comunicare con usted.
 </div>
 <header>
